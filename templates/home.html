@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .title }}</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/prediction">Crop Prediction</a></li>
+            </ul>
+        </div>
+        
+        <div class="content">
+            <h1 class="gradient-title">Crop Prediction Application</h1>
+            
+            <div class="home-content">
+                <img src="static\\img\\3.jpg" alt="Home Image" class="home-image">
+                
+                <h3 class="gradient-subtitle">About the Project</h3>
+                
+                <div class="scrollable-text">
+                    <ul>
+                        <li><b>This project aims to provide an AI-powered application to predict the most suitable crop based on environmental conditions.</b> The model uses key factors such as nitrogen content, phosphorus content, potassium content, temperature, humidity, soil pH, and rainfall to determine the best crop to cultivate in a given region. By leveraging these environmental factors, the application enables farmers and agriculturalists to make informed decisions, ensuring optimal crop yield.</li>
+                        <li><b>In this project, we use the Random Forest Classifier, a powerful machine learning algorithm known for its ability to handle complex, high-dimensional data and for providing robust predictions in classification tasks.</b> Random Forest works by constructing multiple decision trees during training and outputs the mode of the classes (the most frequent class) as the prediction. This ensemble method makes the model more accurate and less prone to overfitting, which is crucial for agricultural predictions where data variability is high.</li>
+                        <li><b>The dataset used for training the model was sourced from Kaggle, a leading platform for data science competitions and datasets.</b> Kaggle provides a rich variety of datasets related to agriculture, including those containing environmental conditions and crop yields, which are essential for training the model.</li>
+                        <li><b>This combination of environmental data, machine learning, and the Random Forest algorithm provides a comprehensive tool for precision farming, helping optimize crop choice and improve yield outcomes by recommending crops that are best suited to the local climate and soil conditions.</b></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        &copy; 2024 Niranjan Jha. All rights reserved.
+    </div>
+</body>
+</html>

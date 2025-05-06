@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .title }}</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/prediction">Crop Prediction</a></li>
+            </ul>
+        </div>
+        
+        <div class="content">
+            <h1 class="gradient-title">Crop Prediction Application</h1>
+            
+            <div class="result-content">
+                {{ if eq .cropName "No suitable crop found for these conditions" }}
+                    <div class="error-message">
+                        <h2>Unfortunately, no suitable crop could be predicted for these conditions.</h2>
+                    </div>
+                    <div class="result-image-container">
+                        <img src="static\\img\\23.jpg" alt="No Crop Found" class="result-image">
+                    </div>
+                {{ else }}
+                    <div class="success-message">
+                        <h2>The best crop for these conditions is: <span class="crop-name">{{ .cropName }}</span></h2>
+                    </div>
+                    <div class="result-image-container">
+                        <img src="static\\img\\45.jpg" alt="Crop Image" class="result-image">
+                    </div>
+                {{ end }}
+                
+                <div class="back-button-container">
+                    <a href="/prediction" class="back-button">Try Another Prediction</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        &copy; 2024 Niranjan Jha. All rights reserved.
+    </div>
+</body>
+</html>
